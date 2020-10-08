@@ -10,8 +10,8 @@ function App() {
         <h1>Shopping Cart</h1>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/shop" component={Shop} />
         </Switch>
-        <Shop />
       </div>
     </Router>
   );
