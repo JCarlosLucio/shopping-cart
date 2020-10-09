@@ -1,9 +1,12 @@
 import React from 'react';
 
-function Item() {
+function Item({ id, imageId, itemName, price, quantity }) {
   return (
     <div>
-      <h1>ITEM</h1>
+      <h1>{itemName}</h1>
+      <img src={`https://source.unsplash.com/${imageId}/250x350`} alt={id} />
+      <p>${price}</p>
+      <p>Quantity: {quantity}</p>
     </div>
   );
 }
