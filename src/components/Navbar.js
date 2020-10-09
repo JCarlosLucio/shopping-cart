@@ -8,6 +8,7 @@ function Navbar() {
         <h1>Shopping Cart</h1>
       </Link>
       <Link to="/shop">Shop</Link>
+      <Link to="/cart">Cart</Link>
     </nav>
   );
 }
