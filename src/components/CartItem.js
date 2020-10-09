@@ -1,9 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function CartItem() {
+function CartItem({ id, itemName, imageId, price, quantity }) {
   return (
     <div>
-      <h1>CART ITEM</h1>
+      <Link to={`/shop/${id}`}>{itemName}</Link>
+      <img src={`https://source.unsplash.com/${imageId}/250x350`} alt={id} />
+      <p>${price}</p>
+      <p>Quantity: {quantity}</p>
+      <button>Delete</button>
     </div>
   );
 }
