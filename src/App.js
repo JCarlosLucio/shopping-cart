@@ -10,6 +10,8 @@ import seedItems from './seedItems';
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const addCartItem = (item) => setCartItems([...cartItems, item]);
+  const deleteCartItem = (id) =>
+    setCartItems(cartItems.filter((item) => item.id !== id));
   const findItem = (id) => seedItems.find((item) => item.id === id);
 
   return (
@@ -32,7 +34,7 @@ function App() {
             )}
           />
           <Route exact path="/cart">
-            <Cart items={cartItems} />
+            <Cart items={cartItems} deleteCartItem={deleteCartItem} />
           </Route>
         </Switch>
       </div>
