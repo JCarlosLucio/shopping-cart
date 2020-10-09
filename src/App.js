@@ -12,6 +12,18 @@ function App() {
   const addCartItem = (item) => setCartItems([...cartItems, item]);
   const deleteCartItem = (id) =>
     setCartItems(cartItems.filter((item) => item.id !== id));
+  const incQty = (id) =>
+    setCartItems(
+      cartItems.map(
+        (item) => (item.id === id ? { ...item, qty: item.qty + 1 } : item)
+      )
+    );
+  const decQty = (id) =>
+    setCartItems(
+      cartItems.map(
+        (item) => (item.id === id ? { ...item, qty: item.qty - 1 } : item)
+      )
+    );
   const findItem = (id) => seedItems.find((item) => item.id === id);
 
   return (
@@ -34,7 +46,12 @@ function App() {
             )}
           />
           <Route exact path="/cart">
-            <Cart items={cartItems} deleteCartItem={deleteCartItem} />
+            <Cart
+              items={cartItems}
+              deleteCartItem={deleteCartItem}
+              incQty={incQty}
+              decQty={decQty}
+            />
           </Route>
         </Switch>
       </div>
