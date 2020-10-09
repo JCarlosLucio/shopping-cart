@@ -6,7 +6,7 @@ function Cart({ items }) {
     <div>
       <h1>CART</h1>
       {items.length > 0 ? (
-        items.map((item) => <CartItem />)
+        items.map((item) => <CartItem {...item} />)
       ) : (
         <h1>- Your cart is empty -</h1>
       )}
