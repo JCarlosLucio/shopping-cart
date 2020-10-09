@@ -25,7 +25,7 @@ function App() {
             exact
             path="/shop/:id"
             render={(routeProps) => (
-              <Item {...findItem(routeProps.match.params.id)} />
+              <Item item={findItem(routeProps.match.params.id)} />
             )}
           />
           <Route exact path="/cart">
