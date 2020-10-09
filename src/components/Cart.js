@@ -7,7 +7,7 @@ function Cart({ items, deleteCartItem }) {
       <h1>CART</h1>
       {items.length > 0 ? (
         items.map((item) => (
-          <CartItem {...item} deleteCartItem={deleteCartItem} />
+          <CartItem key={item.id} {...item} deleteCartItem={deleteCartItem} />
         ))
       ) : (
         <h1>- Your cart is empty -</h1>
