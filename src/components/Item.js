@@ -1,8 +1,10 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-function Item({ item }) {
+function Item({ item, addCartItem }) {
   const { goBack } = useHistory();
+
+  const handleAdd = () => addCartItem(item);
 
   return (
     <div>
@@ -13,7 +15,7 @@ function Item({ item }) {
       />
       <p>${item.price}</p>
       <button onClick={goBack}>Go Back</button>
-      <button>Add to Cart</button>
+      <button onClick={handleAdd}>Add to Cart</button>
     </div>
   );
 }
