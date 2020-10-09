@@ -7,6 +7,7 @@ function Item({ id, imageId, itemName, price, quantity }) {
       <img src={`https://source.unsplash.com/${imageId}/250x350`} alt={id} />
       <p>${price}</p>
       <p>Quantity: {quantity}</p>
+      <button>Go Back</button>
     </div>
   );
 }
