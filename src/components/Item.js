@@ -11,6 +11,7 @@ function Item({ id, imageId, itemName, price, quantity }) {
       <p>${price}</p>
       <p>Quantity: {quantity}</p>
       <button onClick={goBack}>Go Back</button>
+      <button>Add to Cart</button>
     </div>
   );
 }
