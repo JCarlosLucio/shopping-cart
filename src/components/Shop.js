@@ -1,11 +1,11 @@
 import React from 'react';
-import Item from './Item';
+import ShopItem from './ShopItem';
 
 function Shop({ items }) {
   return (
     <div>
       <h1>SHOP</h1>
-      {items.map((item) => <Item key={item.id} {...item} />)}
+      {items.map((item) => <ShopItem key={item.id} {...item} />)}
     </div>
   );
 }
