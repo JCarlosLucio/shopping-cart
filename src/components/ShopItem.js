@@ -5,7 +5,9 @@ function Item({ id, imageId, itemName, price }) {
   return (
     <div>
       <Link to={`/shop/${id}`}>{itemName}</Link>
-      <img src={`https://source.unsplash.com/${imageId}/250x350`} alt={id} />
+      <Link to={`/shop/${id}`}>
+        <img src={`https://source.unsplash.com/${imageId}/250x350`} alt={id} />
+      </Link>
       <p>${price}</p>
     </div>
   );
