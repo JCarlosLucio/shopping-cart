@@ -21,8 +21,10 @@ function CartItem({
       <img src={`https://source.unsplash.com/${imageId}/250x350`} alt={id} />
       <p>${price}</p>
       <p>
-        <button onClick={handleDecrease}>-</button> Quantity: {qty}{' '}
-        <button onClick={handleIncrease}>+</button>
+        <button onClick={handleDecrease} disabled={qty < 2}>
+          -
+        </button>{' '}
+        Quantity: {qty} <button onClick={handleIncrease}>+</button>
       </p>
       <button onClick={handleDelete}>Delete</button>
     </div>
