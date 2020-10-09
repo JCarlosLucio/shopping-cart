@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -8,6 +8,8 @@ import Cart from './components/Cart';
 import seedItems from './seedItems';
 
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+
   const findItem = (id) => seedItems.find((item) => item.id === id);
 
   return (
@@ -26,7 +28,9 @@ function App() {
               <Item {...findItem(routeProps.match.params.id)} />
             )}
           />
-          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/cart">
+            <Cart items={cartItems} />
+          </Route>
         </Switch>
       </div>
     </Router>
