@@ -9,7 +9,7 @@ import seedItems from './seedItems';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-
+  const addCartItem = (item) => setCartItems([...cartItems, item]);
   const findItem = (id) => seedItems.find((item) => item.id === id);
 
   return (
@@ -25,7 +25,10 @@ function App() {
             exact
             path="/shop/:id"
             render={(routeProps) => (
-              <Item item={findItem(routeProps.match.params.id)} />
+              <Item
+                item={findItem(routeProps.match.params.id)}
+                addCartItem={addCartItem}
+              />
             )}
           />
           <Route exact path="/cart">
