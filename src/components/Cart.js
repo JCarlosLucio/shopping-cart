@@ -10,6 +10,10 @@ function Cart({ items, deleteCartItem, changeQty }) {
       changeQty={changeQty}
     />
   ));
+  const cartTotal = items
+    .map((item) => item.price * item.qty)
+    .reduce((a, c) => a + c, 0)
+    .toFixed(2);
 
   return (
     <div>
@@ -17,6 +21,7 @@ function Cart({ items, deleteCartItem, changeQty }) {
       {items.length > 0 ? (
         <div>
           <div>{cartItems}</div>
+          <h2>Total: ${cartTotal}</h2>
         </div>
       ) : (
         <h1>- Your cart is empty -</h1>
