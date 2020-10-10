@@ -1,0 +1,9 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.root a {
+  color: black;
+  text-decoration: none;
+}
