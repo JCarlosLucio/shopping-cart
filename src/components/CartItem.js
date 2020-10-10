@@ -8,12 +8,11 @@ function CartItem({
   price,
   qty,
   deleteCartItem,
-  incQty,
-  decQty,
+  changeQty,
 }) {
   const handleDelete = () => deleteCartItem(id);
-  const handleIncrease = () => incQty(id);
-  const handleDecrease = () => decQty(id);
+  const handleIncrease = () => changeQty(id, 1);
+  const handleDecrease = () => changeQty(id, -1);
 
   return (
     <div>
