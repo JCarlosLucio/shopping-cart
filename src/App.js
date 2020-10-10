@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar />
+        <Navbar cartItemsQty={cartItems.length} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/shop">
