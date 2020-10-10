@@ -1,10 +1,14 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
 function Item({ item, addCartItem }) {
+  const [showCompleteOrder, setShowCompleteOrder] = useState(false);
   const { goBack } = useHistory();
 
-  const handleAdd = () => addCartItem(item);
+  const handleAdd = () => {
+    setShowCompleteOrder(true);
+    addCartItem(item);
+  };
 
   return (
     <div>
@@ -16,6 +20,11 @@ function Item({ item, addCartItem }) {
       <p>${item.price}</p>
       <button onClick={goBack}>Go Back</button>
       <button onClick={handleAdd}>Add to Cart</button>
+      {showCompleteOrder && (
+        <Link to="/cart">
+          <button>Complete Order</button>
+        </Link>
+      )}
     </div>
   );
 }
