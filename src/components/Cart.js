@@ -1,7 +1,7 @@
 import React from 'react';
 import CartItem from './CartItem';
 
-function Cart({ items, deleteCartItem, incQty, decQty }) {
+function Cart({ items, deleteCartItem, changeQty }) {
   return (
     <div>
       <h1>CART</h1>
@@ -11,8 +11,7 @@ function Cart({ items, deleteCartItem, incQty, decQty }) {
             key={item.id}
             {...item}
             deleteCartItem={deleteCartItem}
-            incQty={incQty}
-            decQty={decQty}
+            changeQty={changeQty}
           />
         ))
       ) : (

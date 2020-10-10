@@ -12,16 +12,10 @@ function App() {
   const addCartItem = (item) => setCartItems([...cartItems, item]);
   const deleteCartItem = (id) =>
     setCartItems(cartItems.filter((item) => item.id !== id));
-  const incQty = (id) =>
+  const changeQty = (id, delta) =>
     setCartItems(
       cartItems.map(
-        (item) => (item.id === id ? { ...item, qty: item.qty + 1 } : item)
-      )
-    );
-  const decQty = (id) =>
-    setCartItems(
-      cartItems.map(
-        (item) => (item.id === id ? { ...item, qty: item.qty - 1 } : item)
+        (item) => (item.id === id ? { ...item, qty: item.qty + delta } : item)
       )
     );
   const findItem = (id) => seedItems.find((item) => item.id === id);
@@ -49,8 +43,7 @@ function App() {
             <Cart
               items={cartItems}
               deleteCartItem={deleteCartItem}
-              incQty={incQty}
-              decQty={decQty}
+              changeQty={changeQty}
             />
           </Route>
         </Switch>
