@@ -32,10 +32,12 @@ function App() {
     );
   const findItem = (id) => seedItems.find((item) => item.id === id);
 
+  const cartItemsQty = cartItems.reduce((acc, cur) => acc + cur.qty, 0);
+
   return (
     <Router>
       <div>
-        <Navbar cartItemsQty={cartItems.length} />
+        <Navbar cartItemsQty={cartItemsQty} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/shop">
