@@ -8,7 +8,7 @@ function Navbar({ cartItemsQty }) {
       <Link to="/">
         <h1>Shopping Cart</h1>
       </Link>
-      <div>
+      <div className={styles.links}>
         <Link to="/shop">Shop</Link>
         <Link to="/cart">Cart {cartItemsQty}</Link>
       </div>
