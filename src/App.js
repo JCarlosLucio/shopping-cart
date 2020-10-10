@@ -9,7 +9,19 @@ import seedItems from './seedItems';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  const addCartItem = (item) => setCartItems([...cartItems, item]);
+  const addCartItem = (newItem) => {
+    // check if already in cart
+    const alreadyInCart = cartItems
+      .map((cItem) => cItem.id)
+      .includes(newItem.id);
+    // if in cart add 1 to qty
+    if (alreadyInCart) {
+      changeQty(newItem.id, 1);
+    } else {
+      // if not add complete item
+      setCartItems([...cartItems, newItem]);
+    }
+  };
   const deleteCartItem = (id) =>
     setCartItems(cartItems.filter((item) => item.id !== id));
   const changeQty = (id, delta) =>
