@@ -11,8 +11,10 @@ function Navbar({ cartItemsQty }) {
       </Link>
       <Link to="/shop">Shop</Link>
       <Link to="/cart">
-        <BsBag className={styles.icon} />
-        <span>{cartItemsQty}</span>
+        <div className={styles.icon}>
+          <BsBag />
+          <span className={styles['icon-num']}>{cartItemsQty}</span>
+        </div>
       </Link>
     </nav>
   );
