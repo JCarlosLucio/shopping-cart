@@ -8,8 +8,10 @@ function Item({ id, imageId, itemName, price }) {
       <Link to={`/shop/${id}`}>
         <img src={`https://source.unsplash.com/${imageId}/350x450`} alt={id} />
       </Link>
-      <Link to={`/shop/${id}`}>{itemName}</Link>
-      <p>{price.toFixed(2)} USD</p>
+      <div className={styles.info}>
+        <Link to={`/shop/${id}`}>{itemName}</Link>
+        <p>{price.toFixed(2)} USD</p>
+      </div>
     </div>
   );
 }
