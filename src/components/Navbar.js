@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { BsBag } from 'react-icons/bs';
 import styles from './Navbar.module.css';
 
 function Navbar({ cartItemsQty }) {
@@ -10,7 +11,10 @@ function Navbar({ cartItemsQty }) {
       </Link>
       <div className={styles.links}>
         <Link to="/shop">Shop</Link>
-        <Link to="/cart">Cart {cartItemsQty}</Link>
+        <Link to="/cart">
+          <BsBag />
+          {cartItemsQty}
+        </Link>
       </div>
     </nav>
   );
