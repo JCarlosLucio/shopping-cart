@@ -22,4 +22,12 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  font-size: 0.88rem;
+  letter-spacing: 0.1rem;
+}
+.info a {
+  font-weight: 400;
+}
+.info p {
+  font-weight: 300;
 }
