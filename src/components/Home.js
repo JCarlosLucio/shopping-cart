@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className={styles.root}>
       <Link to="/shop">
-        <button>View Catalog</button>
+        <button className={styles['white-btn']}>View Catalog</button>
       </Link>
     </div>
   );

@@ -5,7 +5,7 @@
   justify-content: center;
   height: 100vh;
   width: 100%;
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   left: 0;
   top: 0;
@@ -13,4 +13,20 @@
   background-position-x: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.white-btn {
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  z-index: 1;
+  padding: 0.3em 2em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  color: black;
+  outline: none;
+  border: none;
+  background-color: white;
+  text-transform: uppercase;
 }
