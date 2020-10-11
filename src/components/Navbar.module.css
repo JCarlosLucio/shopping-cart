@@ -9,13 +9,6 @@
   text-decoration: none;
 }
 
-.links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 10rem;
-}
-
 .icon {
   font-size: 1.5rem;
 }

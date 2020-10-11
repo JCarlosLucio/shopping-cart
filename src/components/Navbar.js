@@ -9,13 +9,11 @@ function Navbar({ cartItemsQty }) {
       <Link to="/">
         <h1>Shopping Cart</h1>
       </Link>
-      <div className={styles.links}>
-        <Link to="/shop">Shop</Link>
-        <Link to="/cart">
-          <BsBag className={styles.icon} />
-          <span>{cartItemsQty}</span>
-        </Link>
-      </div>
+      <Link to="/shop">Shop</Link>
+      <Link to="/cart">
+        <BsBag className={styles.icon} />
+        <span>{cartItemsQty}</span>
+      </Link>
     </nav>
   );
 }
