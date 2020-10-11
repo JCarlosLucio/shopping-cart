@@ -9,7 +9,7 @@ function Item({ id, imageId, itemName, price }) {
         <img src={`https://source.unsplash.com/${imageId}/350x450`} alt={id} />
       </Link>
       <Link to={`/shop/${id}`}>{itemName}</Link>
-      <p>${price}</p>
+      <p>{price.toFixed(2)} USD</p>
     </div>
   );
 }
