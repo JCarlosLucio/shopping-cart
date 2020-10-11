@@ -12,8 +12,8 @@ function Navbar({ cartItemsQty }) {
       <div className={styles.links}>
         <Link to="/shop">Shop</Link>
         <Link to="/cart">
-          <BsBag />
-          {cartItemsQty}
+          <BsBag className={styles.icon} />
+          <span>{cartItemsQty}</span>
         </Link>
       </div>
     </nav>
