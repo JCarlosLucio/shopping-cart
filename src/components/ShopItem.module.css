@@ -5,4 +5,13 @@
   justify-content: space-evenly;
   width: 350px;
   height: 520px;
+  text-transform: uppercase;
+}
+
+.root a {
+  text-decoration: none;
+  color: black;
+}
+.root a:hover {
+  text-decoration: underline;
 }
