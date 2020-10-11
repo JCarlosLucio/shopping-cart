@@ -7,7 +7,6 @@
   height: 5rem;
 }
 .root a {
-  color: black;
   text-decoration: none;
 }
 
@@ -25,4 +24,11 @@
   margin-left: -9px;
   font-size: 1rem;
   text-align: center;
+}
+
+.white-text a {
+  color: white;
+}
+.black-text a {
+  color: black;
 }
