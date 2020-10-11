@@ -36,7 +36,7 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <React.Fragment>
         <Navbar cartItemsQty={cartItemsQty} />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -61,7 +61,7 @@ function App() {
             />
           </Route>
         </Switch>
-      </div>
+      </React.Fragment>
     </Router>
   );
 }
