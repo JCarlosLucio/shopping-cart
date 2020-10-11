@@ -10,9 +10,15 @@
   top: 0;
   left: 0;
   right: 0;
+  font-size: 1.3rem;
 }
 .root a {
   text-decoration: none;
+}
+
+.logo {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 3rem;
 }
 
 .icon {

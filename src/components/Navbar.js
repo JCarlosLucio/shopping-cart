@@ -14,7 +14,7 @@ function Navbar({ cartItemsQty }) {
       ]}`}
     >
       <Link to="/">
-        <h1>Shopping Cart</h1>
+        <h1 className={styles.logo}>Shopping Cart</h1>
       </Link>
       <Link to="/shop">Shop</Link>
       <Link to="/cart">
