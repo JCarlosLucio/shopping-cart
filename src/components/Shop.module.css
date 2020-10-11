@@ -6,8 +6,8 @@
   min-height: calc(100vh - 5rem);
   height: 100%;
   margin-top: 5rem;
-  padding: 0rem;
+  padding: 2rem 0;
   grid-template-columns: repeat(4, 25%);
   grid-auto-rows: auto-fit;
-  row-gap: 2.5rem;
+  row-gap: 3.5rem;
 }
