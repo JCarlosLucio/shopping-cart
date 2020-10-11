@@ -6,7 +6,7 @@ function Item({ id, imageId, itemName, price }) {
     <div>
       <Link to={`/shop/${id}`}>{itemName}</Link>
       <Link to={`/shop/${id}`}>
-        <img src={`https://source.unsplash.com/${imageId}/250x350`} alt={id} />
+        <img src={`https://source.unsplash.com/${imageId}/350x450`} alt={id} />
       </Link>
       <p>${price}</p>
     </div>
