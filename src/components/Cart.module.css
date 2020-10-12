@@ -49,6 +49,18 @@
   text-transform: uppercase;
   word-spacing: 1rem;
 }
+.black-btn {
+  padding: 0.4em 2em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border: none;
+  background-color: black;
+  text-transform: uppercase;
+}
 
 .empty-cart-container {
   width: 450px;
