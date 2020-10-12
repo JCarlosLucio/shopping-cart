@@ -18,15 +18,17 @@ function CartItem({
   return (
     <div className={styles.root}>
       <img src={`https://source.unsplash.com/${imageId}/250x350`} alt={id} />
-      <Link to={`/shop/${id}`}>{itemName}</Link>
-      <p>${price}</p>
-      <p>
-        <button onClick={handleDecrease} disabled={qty < 2}>
-          -
-        </button>{' '}
-        Quantity: {qty} <button onClick={handleIncrease}>+</button>
-      </p>
-      <button onClick={handleDelete}>Delete</button>
+      <div className={styles.info}>
+        <Link to={`/shop/${id}`}>{itemName}</Link>
+        <p>${price}</p>
+        <p>
+          <button onClick={handleDecrease} disabled={qty < 2}>
+            -
+          </button>{' '}
+          Quantity: {qty} <button onClick={handleIncrease}>+</button>
+        </p>
+        <button onClick={handleDelete}>Delete</button>
+      </div>
     </div>
   );
 }
