@@ -25,7 +25,7 @@ function Cart({ items, deleteCartItem, changeQty }) {
           <h2>Total: ${cartTotal}</h2>
         </div>
       ) : (
-        <div>
+        <div className={styles['empty-cart-container']}>
           <img
             className={styles.image}
             src={`https://source.unsplash.com/LvySG1hvuzI/1080x600`}
