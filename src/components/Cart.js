@@ -18,14 +18,21 @@ function Cart({ items, deleteCartItem, changeQty }) {
 
   return (
     <div className={styles.root}>
-      <h1>CART</h1>
+      <h1>MY SHOPPING CART</h1>
       {items.length > 0 ? (
         <div>
           <div>{cartItems}</div>
           <h2>Total: ${cartTotal}</h2>
         </div>
       ) : (
-        <h1>- Your cart is empty -</h1>
+        <div>
+          <img
+            className={styles.image}
+            src={`https://source.unsplash.com/LvySG1hvuzI/1080x600`}
+            alt="empty-cart"
+          />
+          <h1>- Your cart is empty -</h1>
+        </div>
       )}
     </div>
   );
