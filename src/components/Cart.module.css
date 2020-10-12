@@ -1,0 +1,8 @@
+/* CART STYLES */
+
+.root {
+  display: flex;
+  min-height: calc(100vh - 6rem);
+  height: 100%;
+  margin-top: 6rem;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import CartItem from './CartItem';
+import styles from './Cart.module.css';
 
 function Cart({ items, deleteCartItem, changeQty }) {
   const cartItems = items.map((item) => (
@@ -16,7 +17,7 @@ function Cart({ items, deleteCartItem, changeQty }) {
     .toFixed(2);
 
   return (
-    <div>
+    <div className={styles.root}>
       <h1>CART</h1>
       {items.length > 0 ? (
         <div>
