@@ -17,7 +17,7 @@ function CartItem({
 
   return (
     <div className={styles.root}>
-      <img src={`https://source.unsplash.com/${imageId}/250x350`} alt={id} />
+      <img src={`https://source.unsplash.com/${imageId}/300x350`} alt={id} />
       <div className={styles.info}>
         <Link to={`/shop/${id}`}>{itemName}</Link>
         <p>{price.toFixed(2)} USD</p>
