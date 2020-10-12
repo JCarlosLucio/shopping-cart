@@ -18,16 +18,21 @@ function Item({ item, addCartItem }) {
         src={`https://source.unsplash.com/${item.imageId}/600x700`}
         alt={item.id}
       />
-      <div className={styles.info}>
-        <h1>{item.itemName}</h1>
-        <p>${item.price}</p>
-        <button onClick={goBack}>Go Back</button>
-        <button onClick={handleAdd}>Add to Cart</button>
-        {showCompleteOrder && (
-          <Link to="/cart">
-            <button>Complete Order</button>
-          </Link>
-        )}
+      <div className={styles['info-container']}>
+        <div className={styles.info}>
+          <h1>{item.itemName}</h1>
+          <p>{item.price.toFixed(2)} USD</p>
+
+          <button onClick={handleAdd}>Add to Cart</button>
+
+          {showCompleteOrder && (
+            <Link to="/cart">
+              <button>Complete Order</button>
+            </Link>
+          )}
+
+          <button onClick={goBack}>Go Back</button>
+        </div>
       </div>
     </div>
   );
