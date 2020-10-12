@@ -29,7 +29,7 @@ function Cart({ items, deleteCartItem, changeQty }) {
             <button onClick={goBack}>
               <BsChevronLeft /> Go Back
             </button>
-            <h2>Total {cartTotal} USD</h2>
+            <h2 className={styles['total-text']}>Total {cartTotal} USD</h2>
             <button>Continue</button>
           </div>
         </div>

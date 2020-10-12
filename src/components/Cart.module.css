@@ -44,6 +44,11 @@
   background-color: white;
   border-top: 1px solid #d1d0d0;
 }
+.total-text {
+  font-size: 2rem;
+  text-transform: uppercase;
+  word-spacing: 1rem;
+}
 
 .empty-cart-container {
   width: 450px;
