@@ -25,11 +25,11 @@ function Cart({ items, deleteCartItem, changeQty }) {
       {items.length > 0 ? (
         <div className={styles['cart-container']}>
           <div className={styles['cart-items']}>{cartItems}</div>
-          <div>
-            <h2>Total {cartTotal} USD</h2>
+          <div className={styles['cart-total']}>
             <button onClick={goBack}>
               <BsChevronLeft /> Go Back
             </button>
+            <h2>Total {cartTotal} USD</h2>
             <button>Continue</button>
           </div>
         </div>
