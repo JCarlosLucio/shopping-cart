@@ -23,11 +23,13 @@ function Item({ item, addCartItem }) {
           <h1>{item.itemName}</h1>
           <p>{item.price.toFixed(2)} USD</p>
 
-          <button onClick={handleAdd}>Add to Cart</button>
+          <button className={styles['black-btn']} onClick={handleAdd}>
+            Add to Cart
+          </button>
 
           {showCompleteOrder && (
             <Link to="/cart">
-              <button>Complete Order</button>
+              <button className={styles['black-btn']}>Complete Order</button>
             </Link>
           )}
 
