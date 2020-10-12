@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './CartItem.module.css';
 
 function CartItem({
   id,
@@ -15,9 +16,9 @@ function CartItem({
   const handleDecrease = () => changeQty(id, -1);
 
   return (
-    <div>
-      <Link to={`/shop/${id}`}>{itemName}</Link>
+    <div className={styles.root}>
       <img src={`https://source.unsplash.com/${imageId}/250x350`} alt={id} />
+      <Link to={`/shop/${id}`}>{itemName}</Link>
       <p>${price}</p>
       <p>
         <button onClick={handleDecrease} disabled={qty < 2}>
