@@ -26,7 +26,7 @@ function Cart({ items, deleteCartItem, changeQty }) {
         <div className={styles['cart-container']}>
           <div className={styles['cart-items']}>{cartItems}</div>
           <div className={styles['cart-total']}>
-            <button onClick={goBack}>
+            <button className={styles['go-back-btn']} onClick={goBack}>
               <BsChevronLeft /> Go Back
             </button>
             <h2 className={styles['total-text']}>Total {cartTotal} USD</h2>

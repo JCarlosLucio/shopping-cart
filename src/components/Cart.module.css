@@ -61,6 +61,14 @@
   background-color: black;
   text-transform: uppercase;
 }
+.go-back-btn {
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: white;
+}
 
 .empty-cart-container {
   width: 450px;
