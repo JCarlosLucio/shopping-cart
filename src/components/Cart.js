@@ -1,8 +1,11 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { BsChevronLeft } from 'react-icons/bs';
 import CartItem from './CartItem';
 import styles from './Cart.module.css';
 
 function Cart({ items, deleteCartItem, changeQty }) {
+  const { goBack } = useHistory();
   const cartItems = items.map((item) => (
     <CartItem
       key={item.id}
@@ -24,7 +27,9 @@ function Cart({ items, deleteCartItem, changeQty }) {
           <div>{cartItems}</div>
           <div>
             <h2>Total {cartTotal} USD</h2>
-
+            <button onClick={goBack}>
+              <BsChevronLeft /> Go Back
+            </button>
             <button>Continue</button>
           </div>
         </div>
