@@ -14,7 +14,8 @@ function Item({ item, addCartItem }) {
   return (
     <div className={styles.root}>
       <img
-        src={`https://source.unsplash.com/${item.imageId}/250x350`}
+        className={styles.image}
+        src={`https://source.unsplash.com/${item.imageId}/600x700`}
         alt={item.id}
       />
       <div className={styles.info}>
