@@ -11,6 +11,12 @@
   padding-top: 2rem;
 }
 
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .empty-cart-container {
   width: 450px;
   height: 650px;
@@ -18,7 +24,6 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .empty-cart-text {
   text-transform: uppercase;
   font-weight: 500;

@@ -20,8 +20,9 @@ function Cart({ items, deleteCartItem, changeQty }) {
     <div className={styles.root}>
       <h1>MY SHOPPING CART</h1>
       {items.length > 0 ? (
-        <div>
+        <div className={styles['cart-container']}>
           <div>{cartItems}</div>
+
           <h2>Total: ${cartTotal}</h2>
         </div>
       ) : (
