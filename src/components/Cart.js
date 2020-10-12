@@ -26,12 +26,7 @@ function Cart({ items, deleteCartItem, changeQty }) {
         </div>
       ) : (
         <div className={styles['empty-cart-container']}>
-          <img
-            className={styles.image}
-            src={`https://source.unsplash.com/LvySG1hvuzI/1080x600`}
-            alt="empty-cart"
-          />
-          <h1>- Your cart is empty -</h1>
+          <h2 className={styles['empty-cart-text']}>- Your cart is empty -</h2>
         </div>
       )}
     </div>
