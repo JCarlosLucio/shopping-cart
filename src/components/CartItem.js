@@ -21,12 +21,15 @@ function CartItem({
       <div className={styles.info}>
         <Link to={`/shop/${id}`}>{itemName}</Link>
         <p>{price.toFixed(2)} USD</p>
-        <p>
+
+        <div className={styles['qty-btns']}>
           <button onClick={handleDecrease} disabled={qty < 2}>
             -
-          </button>{' '}
-          Quantity: {qty} <button onClick={handleIncrease}>+</button>
-        </p>
+          </button>
+          <span>{qty}</span>
+          <button onClick={handleIncrease}>+</button>
+        </div>
+
         <button onClick={handleDelete}>Delete</button>
       </div>
     </div>
