@@ -20,7 +20,7 @@ function CartItem({
       <img src={`https://source.unsplash.com/${imageId}/250x350`} alt={id} />
       <div className={styles.info}>
         <Link to={`/shop/${id}`}>{itemName}</Link>
-        <p>${price}</p>
+        <p>{price.toFixed(2)} USD</p>
         <p>
           <button onClick={handleDecrease} disabled={qty < 2}>
             -
