@@ -30,7 +30,9 @@ function CartItem({
           <button onClick={handleIncrease}>+</button>
         </div>
 
-        <button onClick={handleDelete}>Delete</button>
+        <button className={styles['delete-btn']} onClick={handleDelete}>
+          Delete
+        </button>
       </div>
     </div>
   );
