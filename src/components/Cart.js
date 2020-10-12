@@ -22,8 +22,11 @@ function Cart({ items, deleteCartItem, changeQty }) {
       {items.length > 0 ? (
         <div className={styles['cart-container']}>
           <div>{cartItems}</div>
+          <div>
+            <h2>Total {cartTotal} USD</h2>
 
-          <h2>Total: ${cartTotal}</h2>
+            <button>Continue</button>
+          </div>
         </div>
       ) : (
         <div className={styles['empty-cart-container']}>
