@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { BsChevronLeft } from 'react-icons/bs';
 import styles from './Item.module.css';
 
 function Item({ item, addCartItem }) {
@@ -33,7 +34,9 @@ function Item({ item, addCartItem }) {
             </Link>
           )}
 
-          <button onClick={goBack}>Go Back</button>
+          <button className={styles['go-back-btn']} onClick={goBack}>
+            <BsChevronLeft /> Go Back
+          </button>
         </div>
       </div>
     </div>
