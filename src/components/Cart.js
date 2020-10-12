@@ -24,7 +24,7 @@ function Cart({ items, deleteCartItem, changeQty }) {
       <h1>MY SHOPPING CART</h1>
       {items.length > 0 ? (
         <div className={styles['cart-container']}>
-          <div>{cartItems}</div>
+          <div className={styles['cart-items']}>{cartItems}</div>
           <div>
             <h2>Total {cartTotal} USD</h2>
             <button onClick={goBack}>

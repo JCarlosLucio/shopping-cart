@@ -13,8 +13,22 @@
 
 .cart-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.cart-items {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  width: 60%;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-auto-rows: auto-fit;
+  row-gap: 3.5rem;
+  padding: 3rem 0;
 }
 
 .empty-cart-container {
