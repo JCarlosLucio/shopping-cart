@@ -29,7 +29,10 @@ function Cart({ items, deleteCartItem, changeQty }) {
             <button className={styles['go-back-btn']} onClick={goBack}>
               <BsChevronLeft /> Go Back
             </button>
-            <h2 className={styles['total-text']}>Total {cartTotal} USD</h2>
+            <h2 className={styles['total-text']}>
+              <span className={styles['total-span']}>Total</span> {cartTotal}{' '}
+              USD
+            </h2>
             <button className={styles['black-btn']}>Continue</button>
           </div>
         </div>
