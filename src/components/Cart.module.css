@@ -106,4 +106,8 @@
     grid-template-columns: repeat(1, 100%);
     width: 100%;
   }
+  .empty-cart-container {
+    width: 350px;
+    height: 550px;
+  }
 }
