@@ -83,3 +83,27 @@
   margin-top: 7rem;
   text-align: center;
 }
+
+/* Extra large devices (desktops, less than 1600px) */
+@media (max-width: 1599.98px) {
+  .cart-items {
+    grid-template-columns: repeat(3, 33.33%);
+    width: 80%;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .cart-items {
+    grid-template-columns: repeat(2, 50%);
+    width: 80%;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .cart-items {
+    grid-template-columns: repeat(1, 100%);
+    width: 100%;
+  }
+}
