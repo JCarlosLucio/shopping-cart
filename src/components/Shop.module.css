@@ -11,3 +11,24 @@
   grid-auto-rows: auto-fit;
   row-gap: 3.5rem;
 }
+
+/* Extra large devices (desktops, less than 1600px) */
+@media (max-width: 1599.98px) {
+  .root {
+    grid-template-columns: repeat(3, 33.33%);
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .root {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .root {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
