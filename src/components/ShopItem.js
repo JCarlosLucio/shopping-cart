@@ -6,7 +6,11 @@ function Item({ id, imageId, itemName, price }) {
   return (
     <div className={styles.root}>
       <Link to={`/shop/${id}`}>
-        <img src={`https://source.unsplash.com/${imageId}/400x500`} alt={id} />
+        <img
+          className={styles['responsive-image']}
+          src={`https://source.unsplash.com/${imageId}/400x500`}
+          alt={id}
+        />
       </Link>
       <div className={styles.info}>
         <Link to={`/shop/${id}`}>{itemName}</Link>

@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  height: 570px;
+  /* height: 570px; */
   text-transform: uppercase;
 }
 
@@ -30,4 +30,9 @@
 }
 .info p {
   font-weight: 300;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
 }
