@@ -58,3 +58,8 @@
 .delete-btn:hover {
   text-decoration: underline;
 }
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
