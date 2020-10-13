@@ -11,6 +11,8 @@
   left: 0;
   right: 0;
   font-size: 1.3rem;
+  background-color: transparent;
+  transition: background-color 0.5s ease-in;
 }
 .root a {
   text-decoration: none;
@@ -42,6 +44,9 @@
 }
 .black-text a {
   color: black;
+}
+.black-text:hover {
+  background-color: white;
 }
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
