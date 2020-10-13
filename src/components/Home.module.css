@@ -30,3 +30,11 @@
   background-color: white;
   text-transform: uppercase;
 }
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .white-btn {
+    top: 75%;
+    left: 32%;
+  }
+}
