@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { BsCodeSlash } from 'react-icons/bs';
 import styles from './Home.module.css';
 
 function Home() {
@@ -8,6 +9,12 @@ function Home() {
       <Link to="/shop">
         <button className={styles['white-btn']}>View Catalog</button>
       </Link>
+      <a
+        className={styles.github}
+        href="https://github.com/JCarlosLucio/shopping-cart"
+      >
+        <BsCodeSlash />
+      </a>
     </div>
   );
 }
