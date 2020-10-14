@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { BsChevronLeft } from 'react-icons/bs';
 import CartItem from './CartItem';
 import styles from './Cart.module.css';
@@ -33,7 +33,9 @@ function Cart({ items, deleteCartItem, changeQty }) {
               <span className={styles['total-span']}>Total</span> {cartTotal}{' '}
               USD
             </h2>
-            <button className={styles['black-btn']}>Continue</button>
+            <Link to="/coming-soon">
+              <button className={styles['black-btn']}>Continue</button>
+            </Link>
           </div>
         </div>
       ) : (
