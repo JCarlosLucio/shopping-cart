@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Shop from './components/Shop';
 import Item from './components/Item';
 import Cart from './components/Cart';
+import ComingSoon from './components/ComingSoon';
 import seedItems from './seedItems';
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
               changeQty={changeQty}
             />
           </Route>
+          <Route exact path="/coming-soon" component={ComingSoon} />
         </Switch>
       </React.Fragment>
     </Router>
