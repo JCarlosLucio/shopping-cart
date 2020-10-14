@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Shop from './components/Shop';
@@ -36,7 +36,7 @@ function App() {
   const cartItemsQty = cartItems.reduce((acc, cur) => acc + cur.qty, 0);
 
   return (
-    <Router>
+    <Router basename="/">
       <React.Fragment>
         <Navbar cartItemsQty={cartItemsQty} />
         <Switch>
