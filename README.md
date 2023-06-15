@@ -9,7 +9,9 @@
 > This project was bootstrapped with
 > [Create React App](https://github.com/facebook/create-react-app).
 
-## ✨ [Shopping Cart Homepage](https://jcarloslucio.github.io/shopping-cart)
+## ✨ Demo
+
+[![Shopping Cart Homepage](../media/shopping-cart-desktop.webp?raw=true)](https://jcarloslucio.github.io/shopping-cart)
 
 ## 📜 Docs
 
@@ -83,13 +85,13 @@ small and middle deployments, and you shouldn’t feel obligated to use this
 feature. However we understand that this tool wouldn’t be useful if you couldn’t
 customize it when you are ready for it.
 
-### Deploy
-
-The predeploy script will run automatically before deploy is run.
+## 🚀 Deployment
 
 ```sh
 npm run predeploy
 ```
+
+The predeploy script will run automatically before deploy is run.
 
 ```sh
 npm run deploy
@@ -98,6 +100,8 @@ npm run deploy
 Deploys the site.
 
 [Deploys the app to GitHub Pages](https://create-react-app.dev/docs/deployment/#github-pages).
+
+[More on deployment](https://facebook.github.io/create-react-app/docs/deployment).
 
 ## Learn More
 
@@ -126,15 +130,18 @@ https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 This section has moved here:
 https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
-
-This section has moved here:
-https://facebook.github.io/create-react-app/docs/deployment
-
 ### `npm run build` fails to minify
 
 This section has moved here:
 https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Lessons Learned
+
+- Routing a React application using `<BrowserRouter />`.
+- Using [CSS Modules](https://github.com/css-modules/css-modules) to keep styles
+  scoped to a Component.
+- Deployment to [GitHub Pages](https://pages.github.com/)
+- Fix routing after deploying to GitHub Pages with `<HashRouter />`.
 
 ## Author
 
