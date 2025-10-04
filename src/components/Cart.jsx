@@ -5,7 +5,8 @@ import styles from './Cart.module.css';
 import CartItem from './CartItem';
 
 function Cart({ items, deleteCartItem, changeQty }) {
-  const { goBack } = useNavigate();
+  const navigate = useNavigate();
+  const goBack = () => navigate(-1);
   const cartItems = items.map((item) => (
     <CartItem
       key={item.id}
