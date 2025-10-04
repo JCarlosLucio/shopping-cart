@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useState } from 'react';
 import { BsChevronLeft } from 'react-icons/bs';
+import { Link, useNavigate } from 'react-router-dom';
+
 import styles from './Item.module.css';
 
 function Item({ item, addCartItem }) {
   const [showCompleteOrder, setShowCompleteOrder] = useState(false);
-  const { goBack } = useHistory();
+  const { goBack } = useNavigate();
 
   const handleAdd = () => {
     setShowCompleteOrder(true);
@@ -24,17 +25,27 @@ function Item({ item, addCartItem }) {
           <h1>{item.itemName}</h1>
           <p>{item.price.toFixed(2)} USD</p>
 
-          <button className={styles['black-btn']} onClick={handleAdd}>
+          <button
+            type="button"
+            className={styles['black-btn']}
+            onClick={handleAdd}
+          >
             Add to Cart
           </button>
 
           {showCompleteOrder && (
             <Link to="/cart">
-              <button className={styles['black-btn']}>Complete Order</button>
+              <button type="button" className={styles['black-btn']}>
+                Complete Order
+              </button>
             </Link>
           )}
 
-          <button className={styles['go-back-btn']} onClick={goBack}>
+          <button
+            type="button"
+            className={styles['go-back-btn']}
+            onClick={goBack}
+          >
             <BsChevronLeft /> Go Back
           </button>
         </div>

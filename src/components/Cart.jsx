@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
 import { BsChevronLeft } from 'react-icons/bs';
-import CartItem from './CartItem';
+import { Link, useNavigate } from 'react-router-dom';
+
 import styles from './Cart.module.css';
+import CartItem from './CartItem';
 
 function Cart({ items, deleteCartItem, changeQty }) {
-  const { goBack } = useHistory();
+  const { goBack } = useNavigate();
   const cartItems = items.map((item) => (
     <CartItem
       key={item.id}
@@ -26,7 +26,11 @@ function Cart({ items, deleteCartItem, changeQty }) {
         <div className={styles['cart-container']}>
           <div className={styles['cart-items']}>{cartItems}</div>
           <div className={styles['cart-total']}>
-            <button className={styles['go-back-btn']} onClick={goBack}>
+            <button
+              type="button"
+              className={styles['go-back-btn']}
+              onClick={goBack}
+            >
               <BsChevronLeft /> Go Back
             </button>
             <h2 className={styles['total-text']}>
@@ -34,7 +38,9 @@ function Cart({ items, deleteCartItem, changeQty }) {
               USD
             </h2>
             <Link to="/coming-soon">
-              <button className={styles['black-btn']}>Continue</button>
+              <button type="button" className={styles['black-btn']}>
+                Continue
+              </button>
             </Link>
           </div>
         </div>

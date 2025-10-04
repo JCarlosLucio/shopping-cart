@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Shop from './components/Shop';
-import Item from './components/Item';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Cart from './components/Cart';
 import ComingSoon from './components/ComingSoon';
+import Home from './components/Home';
+import Item from './components/Item';
+import Navbar from './components/Navbar';
+import Shop from './components/Shop';
 import seedItems from './seedItems';
 
 function App() {
@@ -27,9 +28,9 @@ function App() {
     setCartItems(cartItems.filter((item) => item.id !== id));
   const changeQty = (id, delta) =>
     setCartItems(
-      cartItems.map(
-        (item) => (item.id === id ? { ...item, qty: item.qty + delta } : item)
-      )
+      cartItems.map((item) =>
+        item.id === id ? { ...item, qty: item.qty + delta } : item,
+      ),
     );
   const findItem = (id) => seedItems.find((item) => item.id === id);
 
@@ -39,7 +40,7 @@ function App() {
     <Router basename="/">
       <React.Fragment>
         <Navbar cartItemsQty={cartItemsQty} />
-        <Switch>
+        <Routes>
           <Route exact path="/" component={Home} />
           <Route exact path="/shop">
             <Shop items={seedItems} />
@@ -62,7 +63,7 @@ function App() {
             />
           </Route>
           <Route exact path="/coming-soon" component={ComingSoon} />
-        </Switch>
+        </Routes>
       </React.Fragment>
     </Router>
   );

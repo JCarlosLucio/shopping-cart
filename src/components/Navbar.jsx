@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { BsBag } from 'react-icons/bs';
+import { Link, useLocation } from 'react-router-dom';
+
 import styles from './Navbar.module.css';
 
 function Navbar({ cartItemsQty }) {
@@ -9,9 +9,9 @@ function Navbar({ cartItemsQty }) {
 
   return (
     <nav
-      className={`${styles.root} ${styles[
-        isHome ? 'white-text' : 'black-text'
-      ]}`}
+      className={`${styles.root} ${
+        styles[isHome ? 'white-text' : 'black-text']
+      }`}
     >
       <Link to="/">
         <h1 className={styles.logo}>Shopping Cart</h1>
