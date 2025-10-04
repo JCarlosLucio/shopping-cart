@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BsChevronLeft } from 'react-icons/bs';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router';
 
 import styles from './Item.module.css';
 

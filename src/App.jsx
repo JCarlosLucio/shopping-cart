@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router';
 
 import Cart from './components/Cart';
 import ComingSoon from './components/ComingSoon';

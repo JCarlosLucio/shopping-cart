@@ -1,5 +1,5 @@
 import { BsBag } from 'react-icons/bs';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router';
 
 import styles from './Navbar.module.css';
 

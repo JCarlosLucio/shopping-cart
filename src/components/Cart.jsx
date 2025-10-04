@@ -1,5 +1,5 @@
 import { BsChevronLeft } from 'react-icons/bs';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router';
 
 import styles from './Cart.module.css';
 import CartItem from './CartItem';
