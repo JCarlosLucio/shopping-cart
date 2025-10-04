@@ -41,28 +41,23 @@ function App() {
       <React.Fragment>
         <Navbar cartItemsQty={cartItemsQty} />
         <Routes>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/shop">
-            <Shop items={seedItems} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop items={seedItems} />} />
           <Route
-            exact
             path="/shop/:id"
-            render={(routeProps) => (
-              <Item
-                item={findItem(routeProps.match.params.id)}
-                addCartItem={addCartItem}
-              />
-            )}
+            element={<Item findItem={findItem} addCartItem={addCartItem} />}
           />
-          <Route exact path="/cart">
-            <Cart
-              items={cartItems}
-              deleteCartItem={deleteCartItem}
-              changeQty={changeQty}
-            />
-          </Route>
-          <Route exact path="/coming-soon" component={ComingSoon} />
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                items={cartItems}
+                deleteCartItem={deleteCartItem}
+                changeQty={changeQty}
+              />
+            }
+          />
+          <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
       </React.Fragment>
     </Router>
