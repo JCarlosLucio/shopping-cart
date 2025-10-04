@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { BsChevronLeft } from 'react-icons/bs';
-import { Link, useNavigate } from 'react-router';
+import { Link, useNavigate, useParams } from 'react-router';
 
 import styles from './Item.module.css';
 
-function Item({ item, addCartItem }) {
+function Item({ findItem, addCartItem }) {
+  const { id } = useParams();
+  const item = findItem(id);
   const [showCompleteOrder, setShowCompleteOrder] = useState(false);
-  const { goBack } = useNavigate();
+  const navigate = useNavigate();
+  const goBack = () => navigate(-1);
 
   const handleAdd = () => {
     setShowCompleteOrder(true);
