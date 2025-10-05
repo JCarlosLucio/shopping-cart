@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
+
 import styles from './CartItem.module.css';
 
 function CartItem({
@@ -19,7 +19,7 @@ function CartItem({
     <div className={styles.root}>
       <img
         className={styles['responsive-image']}
-        src={`https://source.unsplash.com/${imageId}/300x350`}
+        src={`https://res.cloudinary.com/dzfhooefh/image/upload/v1759612561/shopping-cart/${imageId}.webp`}
         alt={id}
       />
       <div className={styles.info}>
@@ -27,14 +27,20 @@ function CartItem({
         <p>{price.toFixed(2)} USD</p>
 
         <div className={styles['qty-btns']}>
-          <button onClick={handleDecrease} disabled={qty < 2}>
+          <button type="button" onClick={handleDecrease} disabled={qty < 2}>
             -
           </button>
           <span>{qty}</span>
-          <button onClick={handleIncrease}>+</button>
+          <button type="button" onClick={handleIncrease}>
+            +
+          </button>
         </div>
 
-        <button className={styles['delete-btn']} onClick={handleDelete}>
+        <button
+          type="button"
+          className={styles['delete-btn']}
+          onClick={handleDelete}
+        >
           Delete
         </button>
       </div>
