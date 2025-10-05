@@ -20,8 +20,8 @@ function Item({ findItem, addCartItem }) {
     <div className={styles.root}>
       <img
         className={styles.image}
-        src={`https://source.unsplash.com/${item.imageId}/600x700`}
-        alt={item.id}
+        src={`https://res.cloudinary.com/dzfhooefh/image/upload/v1759612561/shopping-cart/${item.imageId}.webp`}
+        alt={item.itemName}
       />
       <div className={styles['info-container']}>
         <div className={styles.info}>

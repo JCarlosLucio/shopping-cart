@@ -19,7 +19,7 @@ function CartItem({
     <div className={styles.root}>
       <img
         className={styles['responsive-image']}
-        src={`https://source.unsplash.com/${imageId}/300x350`}
+        src={`https://res.cloudinary.com/dzfhooefh/image/upload/v1759612561/shopping-cart/${imageId}.webp`}
         alt={id}
       />
       <div className={styles.info}>

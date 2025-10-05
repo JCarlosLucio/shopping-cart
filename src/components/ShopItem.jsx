@@ -8,8 +8,8 @@ function Item({ id, imageId, itemName, price }) {
       <Link to={`/shop/${id}`}>
         <img
           className={styles['responsive-image']}
-          src={`https://source.unsplash.com/${imageId}/400x500`}
-          alt={id}
+          src={`https://res.cloudinary.com/dzfhooefh/image/upload/v1759612561/shopping-cart/${imageId}.webp`}
+          alt={itemName}
         />
       </Link>
       <div className={styles.info}>

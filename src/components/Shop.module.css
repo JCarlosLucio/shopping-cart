@@ -1,21 +1,24 @@
 .root {
   display: grid;
   justify-items: center;
+  justify-content: center;
   align-items: center;
   align-content: center;
   min-height: calc(100vh - 6rem);
   height: 100%;
   margin-top: 6rem;
-  padding: 2rem 0;
+  padding: 2rem 2rem;
   grid-template-columns: repeat(4, 25%);
   grid-auto-rows: auto-fit;
   row-gap: 3.5rem;
+  column-gap: 0.5rem;
 }
 
 /* Extra large devices (desktops, less than 1600px) */
 @media (max-width: 1599.98px) {
   .root {
     grid-template-columns: repeat(3, 33.33%);
+    padding: 2rem 1rem;
   }
 }
 
