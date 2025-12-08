@@ -18,7 +18,7 @@ export default defineConfig(
   eslintConfigPrettier,
   reactPlugin.configs.flat.recommended,
   reactPlugin.configs.flat['jsx-runtime'],
-  reactHooks.configs['recommended-latest'],
+  reactHooks.configs.flat["recommended-latest"],
   {
     files: ['**/*.{js,mjs,cjs,jsx,mjsx,}'],
     languageOptions: {
