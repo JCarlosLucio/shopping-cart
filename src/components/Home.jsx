@@ -17,6 +17,7 @@ function Home() {
       >
         <BsCodeSlash />
       </a>
+      <small className={styles.version}>v0.1.0</small>
     </div>
   );
 }
