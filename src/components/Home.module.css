@@ -15,6 +15,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .white-btn {
   position: absolute;
   top: 60%;
@@ -31,12 +32,21 @@
   background-color: white;
   text-transform: uppercase;
 }
+
 .github {
   font-size: 2rem;
   cursor: pointer;
   color: white;
   padding: 1rem;
   text-decoration: none;
+}
+
+.version {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  padding: 0.5rem;
 }
 
 /* Extra small devices (portrait phones, less than 576px) */

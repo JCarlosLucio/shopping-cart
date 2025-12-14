@@ -17,6 +17,9 @@ function Home() {
       >
         <BsCodeSlash />
       </a>
+      <small className={styles.version}>
+        v{import.meta.env.VITE_APP_VERSION}
+      </small>
     </div>
   );
 }
